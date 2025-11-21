@@ -5,12 +5,16 @@ export const STATIC_LESSONS: Record<number, LessonContent> = {
     theory: `## System Initialization: Hello World  
 Neural link established.  
 Your first transmission through the PyVerse comms grid is the classic **"Hello, World!"** signal.  
-This ritual confirms that your Python module is online and responding.
-    
+This ritual confirms that your Python module is online and responding.`,
+    tutorial: `The \`print()\` function is Python's way of outputting information to the console (the screen). 
+To print text, you must enclose it in matching quotes—either single (\`'text'\`) or double (\`"text"\`).
+
+**Example:**
 \`\`\`python
-print("System Check")
+print("System Ready")
+print('Engine Online')
 \`\`\`
-`,
+Using \`print()\` is the most fundamental way to debug and inspect what your code is doing.`,
     challenge: `**Mission:**  
 Transmit the message **Hello, World!** to the PyVerse command console using the \`print()\` function.`,
     starterCode: `# Initialize transmission below
@@ -24,13 +28,18 @@ Transmit the message **Hello, World!** to the PyVerse command console using the 
   2: {
     theory: `## Data Buffer Allocation: Variables  
 In the PyVerse, variables are memory capsules—named containers storing mission-critical data.  
-Assign values to activate them.
+Assign values to activate them.`,
+    tutorial: `Variables are created the moment you assign a value to them. You don't need to declare a type (like "int" or "string") beforehand; Python figures it out automatically.
     
+**Syntax:** \`variable_name = value\`
+
+**Example:**
 \`\`\`python
-status = "Active"
-core_temp = 450
+pilot_name = "Neo"
+altitude = 5000
+print(pilot_name)
 \`\`\`
-`,
+Variable names cannot start with a number and should not contain spaces (use underscores like \`my_variable\`).`,
     challenge: `**Mission:**  
 Create a variable named \`signal\` and store the string **"Online"** inside it. Then print the variable.`,
     starterCode: `# Create and print the variable
@@ -45,6 +54,18 @@ Create a variable named \`signal\` and store the string **"Online"** inside it. 
     theory: `## Molecular Structuring: Data Types  
 Python entities come in many forms—strings, integers, floats, booleans.  
 Recognizing their type is essential for stable reactor computations.`,
+    tutorial: `Common Python data types include:
+- **Integer (\`int\`)**: Whole numbers (e.g., \`5\`, \`-10\`).
+- **Float (\`float\`)**: Decimal numbers (e.g., \`3.14\`, \`0.001\`).
+- **String (\`str\`)**: Text enclosed in quotes (e.g., \`"Hello"\`).
+- **Boolean (\`bool\`)**: Truth values (\`True\` or \`False\`).
+
+**Example:**
+\`\`\`python
+x = 10      # int
+y = 10.5    # float
+z = "10"    # str
+\`\`\``,
     challenge: `**Mission:**  
 Create:  
 - an integer variable \`level\` set to **3**  
@@ -61,13 +82,21 @@ Print both variables on separate lines.`,
   4: {
     theory: `## Decision Core: If Statements  
 The PyVerse AI routes decisions through conditional gates.  
-If a condition is true, a new timeline is activated.
-    
+If a condition is true, a new timeline is activated.`,
+    tutorial: `Python uses **indentation** (whitespace at the beginning of a line) to define blocks of code. An \`if\` statement checks a condition. If the condition is true, the indented code block runs.
+
+**Syntax:**
 \`\`\`python
-if fuel < 10:
-    print("Warning")
+if condition:
+    # Indented code runs if true
 \`\`\`
-`,
+
+**Example:**
+\`\`\`python
+fuel = 10
+if fuel < 20:
+    print("Low Fuel")
+\`\`\``,
     challenge: `**Mission:**  
 Write an if-statement: If \`power\` is greater than **50**, print **"Reactor Stable"**.`,
     starterCode: `power = 75  # Do not change this
@@ -81,12 +110,20 @@ Write an if-statement: If \`power\` is greater than **50**, print **"Reactor Sta
 
   5: {
     theory: `## Temporal Loop Engine: For Loops  
-For-loops iterate through sequences—like scanning star sectors one by one.
+For-loops iterate through sequences—like scanning star sectors one by one.`,
+    tutorial: `A \`for\` loop iterates over a sequence (like a list or a range of numbers). The \`range()\` function generates a sequence of numbers.
     
+**Note:** \`range(start, stop)\` includes the start number but excludes the stop number.
+
+**Example:**
 \`\`\`python
+# Prints 0, 1, 2
 for i in range(3):
     print(i)
-# Prints 0, 1, 2
+
+# Prints 2, 3, 4
+for x in range(2, 5):
+    print(x)
 \`\`\`
 `,
     challenge: `**Mission:**  
@@ -103,6 +140,16 @@ Use a \`for\` loop with \`range()\` to print the numbers **1** through **5** (in
     theory: `## Continuity Cycle: While Loops  
 While-loops persist until a condition collapses.  
 Use with caution—endless loops can destabilize the warp grid.`,
+    tutorial: `A \`while\` loop continues to execute a block of code as long as its condition remains True. You must ensure the condition eventually becomes False to avoid an infinite loop.
+
+**Example:**
+\`\`\`python
+count = 0
+while count < 3:
+    print("Counting...")
+    count = count + 1  # Increment to eventually stop
+\`\`\`
+`,
     challenge: `**Mission:**  
 Use a \`while\` loop to print numbers **1** to **3**. Increment your counter variable carefully.`,
     starterCode: `counter = 1
@@ -117,13 +164,16 @@ Use a \`while\` loop to print numbers **1** to **3**. Increment your counter var
   7: {
     theory: `## Data Array: Lists  
 Lists are multi-slot memory crates.  
-Store multiple items, traverse them, deploy them.
-    
+Store multiple items, traverse them, deploy them.`,
+    tutorial: `Lists are ordered collections of items. They are created using square brackets \`[]\`.
+Python is **0-indexed**, meaning the first item is at position 0, the second at 1, etc.
+
+**Example:**
 \`\`\`python
-items = ["key", "map"]
-print(items[0])
-\`\`\`
-`,
+ships = ["X-Wing", "TIE Fighter", "Falcon"]
+print(ships[0]) # Prints "X-Wing"
+print(ships[2]) # Prints "Falcon"
+\`\`\``,
     challenge: `**Mission:**  
 Create a list named \`modules\` containing the strings: **"engine"**, **"shields"**, **"comms"**.  
 Print the **second** item ("shields").`,
@@ -137,12 +187,17 @@ Print the **second** item ("shields").`,
 
   8: {
     theory: `## Keyed Storage Lattice: Dictionaries  
-Dictionaries map keys to values, like encrypted ID→Data links.
-    
+Dictionaries map keys to values, like encrypted ID→Data links.`,
+    tutorial: `Dictionaries store data in **key: value** pairs. They are unordered and changeable. You access values by referencing their key, not an index number. Use curly braces \`{}\`.
+
+**Example:**
 \`\`\`python
-user = {"id": 1, "role": "admin"}
-\`\`\`
-`,
+alien = {
+  "color": "green",
+  "planet": "Mars"
+}
+print(alien["color"]) # Prints "green"
+\`\`\``,
     challenge: `**Mission:**  
 Create a dictionary named \`pilot\` with keys:  
 - **"name"**: set to **"Nova"**  
@@ -159,15 +214,17 @@ Print the pilot's **rank**.`,
   9: {
     theory: `## Subroutine Matrix: Functions  
 Functions encapsulate reusable command sequences.  
-Invoke them to execute skill modules.
-    
-\`\`\`python
-def scan():
-    print("Scanning...")
+Invoke them to execute skill modules.`,
+    tutorial: `A function is a block of code which only runs when it is called. You can pass data, known as parameters, into a function.
+Use the \`def\` keyword to define one.
 
-scan()
-\`\`\`
-`,
+**Example:**
+\`\`\`python
+def greet():
+    print("Hello Commander")
+
+greet() # Calls the function
+\`\`\``,
     challenge: `**Mission:**  
 Define a function named \`activate()\` that prints **"Module Activated"**.  
 Then **call** the function.`,
@@ -183,6 +240,18 @@ Then **call** the function.`,
     theory: `## Local vs Global Reality: Scope  
 Variables exist in universes—local or global.  
 Inside functions, local variables override cosmic (global) values.`,
+    tutorial: `**Global Scope**: Variables created in the main body of the code are global and can be used anywhere.
+**Local Scope**: Variables created inside a function belong to that function. They cannot be accessed from outside. If a local variable has the same name as a global one, the function uses the local one.
+
+**Example:**
+\`\`\`python
+x = 10 # Global
+def test():
+    x = 5 # Local
+    print(x) # Prints 5
+test()
+print(x) # Prints 10
+\`\`\``,
     challenge: `**Mission:**  
 1. Create a global variable \`status\` = **"Offline"**.  
 2. Define a function \`update()\` that sets a local variable \`status\` = **"Online"** and prints it.  
@@ -198,14 +267,19 @@ Inside functions, local variables override cosmic (global) values.`,
   11: {
     theory: `## Structural Blueprint: Classes  
 Classes define starship templates.  
-Objects are instantiated vessels based on these schematics.
-    
+Objects are instantiated vessels based on these schematics.`,
+    tutorial: `Python is an Object Oriented Programming (OOP) language. A **Class** is like a blueprint for creating objects.
+Inside a class, functions are called **methods**. The first parameter of any method must be \`self\`, which refers to the current instance of the object.
+
+**Example:**
 \`\`\`python
-class Bot:
-    def beep(self):
-        print("Beep")
-\`\`\`
-`,
+class Robot:
+    def say_hi(self):
+        print("Beep Boop")
+
+r1 = Robot() # Create instance
+r1.say_hi()  # Call method
+\`\`\``,
     challenge: `**Mission:**  
 1. Create a class named \`Ship\`.  
 2. Add a method \`launch(self)\` that prints **"Launch Sequence Initiated"**.  
@@ -221,6 +295,21 @@ class Bot:
   12: {
     theory: `## Lineage Protocol: Inheritance  
 Classes can inherit traits from parent blueprints—enhancing or overriding capabilities.`,
+    tutorial: `Inheritance allows us to define a class that inherits all the methods and properties from another class.
+**Parent Class (Base Class)**: The class being inherited from.
+**Child Class (Derived Class)**: The class that inherits.
+
+**Example:**
+\`\`\`python
+class Animal:
+    def eat(self): print("Nom Nom")
+
+class Dog(Animal): # Dog inherits Animal
+    pass 
+
+dog = Dog()
+dog.eat() # Prints "Nom Nom"
+\`\`\``,
     challenge: `**Mission:**  
 1. Create a class \`Drone\` that inherits from \`Unit\`.  
 2. Ensure \`Drone\` can use the parent's \`ping()\` method.  
@@ -239,14 +328,23 @@ Classes can inherit traits from parent blueprints—enhancing or overriding capa
 
   13: {
     theory: `## Enhancement Layer: Decorators  
-Decorators modify functions with augmentation modules—preprocessing, authorization, logging.
-    
+Decorators modify functions with augmentation modules—preprocessing, authorization, logging.`,
+    tutorial: `A decorator is a function that takes another function and extends the behavior of the latter function without explicitly modifying it.
+Syntactically, you use the \`@\` symbol.
+
+**How it works:**
 \`\`\`python
-@enhance
-def attack():
-   ...
-\`\`\`
-`,
+def my_decorator(func):
+    def wrapper():
+        print("Before")
+        func()
+        print("After")
+    return wrapper
+
+@my_decorator
+def say_hello():
+    print("Hello")
+\`\`\``,
     challenge: `**Mission:**  
 1. Create a decorator \`boost\` that prints **"Boosting"** before calling the function.  
 2. Apply it to a function \`run\` that prints **"Running"**.  
@@ -272,14 +370,19 @@ run()
 
   14: {
     theory: `## Energy Stream Emitters: Generators  
-Generators yield values lazily—power-efficient data streams ideal for long-range scans.
-    
+Generators yield values lazily—power-efficient data streams ideal for long-range scans.`,
+    tutorial: `Normal functions return a single result and exit. Generators use \`yield\` to produce a sequence of results over time. Each time \`yield\` is hit, the function pauses and saves its state.
+This is memory efficient for large loops.
+
+**Example:**
 \`\`\`python
-def count():
-    yield 1
-    yield 2
-\`\`\`
-`,
+def my_gen():
+    yield "A"
+    yield "B"
+
+for char in my_gen():
+    print(char)
+\`\`\``,
     challenge: `**Mission:**  
 Create a generator function \`scan()\` that uses \`yield\` to output **1**, then **2**, then **3**.  
 Iterate over it with a loop and print each value.`,
@@ -293,13 +396,20 @@ Iterate over it with a loop and print each value.`,
 
   15: {
     theory: `## Temporal Async Core: Async/Await  
-Async functions run concurrently—perfect for multi-channel starship operations.
-    
+Async functions run concurrently—perfect for multi-channel starship operations.`,
+    tutorial: `Asynchronous programming allows your program to handle other tasks while waiting for a long operation (like a network request) to finish.
+You use \`async def\` to define a coroutine and \`await\` to wait for a result.
+
+**Example:**
 \`\`\`python
-async def main():
-    await task()
-\`\`\`
-`,
+import asyncio
+
+async def say_after(delay, what):
+    await asyncio.sleep(delay)
+    print(what)
+
+asyncio.run(say_after(1, 'hello'))
+\`\`\``,
     challenge: `**Mission:**  
 1. Define an \`async\` function named \`pulse()\`.  
 2. Inside, print **"Pulse"**.  
@@ -317,15 +427,18 @@ async def main():
   16: {
     theory: `## Anomaly Containment: Try / Except
 Errors (Exceptions) can cause system crashes.  
-Wrap unstable code in \`try/except\` blocks to maintain containment fields.
+Wrap unstable code in \`try/except\` blocks to maintain containment fields.`,
+    tutorial: `When an error occurs, Python normally stops and generates an error message. This can be handled using the \`try\` statement.
+- **try**: The block of code to test for errors.
+- **except**: The block of code to handle the error.
 
+**Example:**
 \`\`\`python
 try:
-    risk = 1 / 0
-except ZeroDivisionError:
-    print("Stabilized")
-\`\`\`
-`,
+    print(undefined_variable)
+except:
+    print("An error occurred")
+\`\`\``,
     challenge: `**Mission:**  
 1. Write a \`try\` block that attempts to divide **10** by **0**.  
 2. Use an \`except\` block to catch the error and print **"Meltdown Averted"**.`,
@@ -339,19 +452,20 @@ except ZeroDivisionError:
 
   17: {
     theory: `## Syntax Compressor: List Comprehensions
-List comprehensions compress multi-line loops into a single line of pure, crystalline logic.
-They are the preferred method for filtering and transforming data streams efficiently.
+List comprehensions compress multi-line loops into a single line of pure, crystalline logic.`,
+    tutorial: `List comprehension offers a shorter syntax when you want to create a new list based on the values of an existing list.
 
+**Syntax:** \`[expression for item in iterable]\`
+
+**Example:**
 \`\`\`python
-# The Old Way
-nums = []
-for x in range(5):
-    nums.append(x * 2)
+# Instead of:
+# new_list = []
+# for x in range(5):
+#     new_list.append(x)
 
-# The PyVerse Way
-nums = [x * 2 for x in range(5)]
-\`\`\`
-`,
+new_list = [x for x in range(5)]
+\`\`\``,
     challenge: `**Mission:**  
 Use a list comprehension to create a list called \`squares\` containing the square (\`x**2\`) of every number from **1** to **5** (inclusive).  
 Print the list.`,
@@ -365,16 +479,18 @@ Print the list.`,
 
   18: {
     theory: `## Nanobot Functionality: Lambda
-Lambda functions are anonymous, single-use subroutines.
-They are perfect for quick calculations where defining a full function is inefficient.
+Lambda functions are anonymous, single-use subroutines.`,
+    tutorial: `A lambda function is a small anonymous function. It can take any number of arguments, but can only have one expression.
+They are often used as inputs to other functions (like \`map\` or \`filter\`).
 
-Syntax: \`lambda arguments : expression\`
+**Syntax:** \`lambda arguments : expression\`
 
+**Example:**
 \`\`\`python
-add = lambda x, y: x + y
-print(add(2, 3)) # Prints 5
-\`\`\`
-`,
+# A function that adds 10 to 'a'
+x = lambda a : a + 10
+print(x(5)) # Prints 15
+\`\`\``,
     challenge: `**Mission:**  
 1. Create a lambda function named \`cube\` that takes one argument \`x\` and returns \`x\` to the power of 3.  
 2. Print the result of \`cube(3)\`.`,
@@ -389,14 +505,16 @@ print(add(2, 3)) # Prints 5
   19: {
     theory: `## Singularity Containers: Sets
 Sets are unordered collections that cannot hold duplicates.
-Any redundant data matter added to a set is instantly annihilated.
+Any redundant data matter added to a set is instantly annihilated.`,
+    tutorial: `Sets are written with curly brackets \`{}\`. Unlike lists, they are unordered, unchangeable (items cannot be changed, but can be added/removed), and most importantly, **do not allow duplicates**.
 
+**Example:**
 \`\`\`python
-ids = {1, 2, 2, 3}
-print(ids) 
-# Output: {1, 2, 3}
-\`\`\`
-`,
+thisset = {"apple", "banana", "apple"}
+print(thisset) 
+# Output: {'banana', 'apple'} 
+# (The second "apple" is ignored)
+\`\`\``,
     challenge: `**Mission:**  
 1. You have a corrupted data stream: \`codes = [101, 102, 101, 103, 102]\`.  
 2. Convert it into a \`set\` named \`unique_codes\` to remove duplicates.  
@@ -412,14 +530,15 @@ codes = [101, 102, 101, 103, 102]
 
   20: {
     theory: `## External Uplink: Modules
-Modules allow you to import code from other files or the standard library.  
-Expand your capabilities by linking to external libraries.
+Modules allow you to import code from other files or the standard library.`,
+    tutorial: `A module is basically a code library—a file containing a set of functions you can include in your application. Python has a massive standard library built-in.
+Use the \`import\` keyword to load them.
 
+**Example:**
 \`\`\`python
-import math
-print(math.sqrt(16))
-\`\`\`
-`,
+import random
+print(random.randint(1, 10))
+\`\`\``,
     challenge: `**Mission:**  
 1. \`import math\`.  
 2. Use \`math.sqrt()\` to find the square root of **25**.  
@@ -434,14 +553,17 @@ print(math.sqrt(16))
 
   21: {
     theory: `## Immutable Sealed Vaults: Tuples
-Tuples are like lists, but once forged, they cannot be altered. 
-They are used to transport data securely without risk of accidental modification.
+Tuples are like lists, but once forged, they cannot be altered.`,
+    tutorial: `Tuples are used to store multiple items in a single variable.
+A tuple is a collection which is ordered and **immutable**.
+Tuples are written with round brackets \`()\`.
 
+**Example:**
 \`\`\`python
-coordinates = (10, 20)
-# coordinates[0] = 5  <-- ERROR!
-\`\`\`
-`,
+thistuple = ("apple", "banana", "cherry")
+# thistuple[0] = "orange" # This raises an Error!
+print(thistuple[0]) # Access is allowed
+\`\`\``,
     challenge: `**Mission:**  
 1. Create a tuple named \`coords\` containing **4**, **5**, and **6**.  
 2. Print the second element (index 1) of the tuple.`,
@@ -455,15 +577,17 @@ coordinates = (10, 20)
 
   22: {
     theory: `## Laser Precision: Slicing
-Slicing allows you to extract specific segments of data streams (lists or strings).
-Syntax: \`[start:stop:step]\`
+Slicing allows you to extract specific segments of data streams (lists or strings).`,
+    tutorial: `You can return a range of characters or items by using the slice syntax.
+Specify the start index and the end index, separated by a colon, to return a part of the string or list.
+**Syntax:** \`sequence[start:stop:step]\`
 
+**Example:**
 \`\`\`python
-data = "012345"
-print(data[1:4]) # "123"
-print(data[::-1]) # "543210" (Reverse)
-\`\`\`
-`,
+b = "Hello, World!"
+print(b[2:5]) # Output: "llo"
+# Index 2 is 'l', Index 5 is ',' (excluded)
+\`\`\``,
     challenge: `**Mission:**  
 1. Given the list \`readings = [10, 20, 30, 40, 50]\`.  
 2. Use slicing to extract **[20, 30, 40]** and store it in \`sub_readings\`.  
@@ -479,14 +603,15 @@ print(data[::-1]) # "543210" (Reverse)
 
   23: {
     theory: `## Holographic Projection: f-Strings
-f-Strings provide a modern, readable way to embed expressions inside string literals.
-They are the standard for reporting variable status.
+f-Strings provide a modern, readable way to embed expressions inside string literals.`,
+    tutorial: `Formatted String Literals (f-strings) are prefixed with \`f\` and use curly braces \`{}\` containing expressions that will be replaced with their values.
 
+**Example:**
 \`\`\`python
-name = "Pilot"
-print(f"Welcome back, {name}.")
-\`\`\`
-`,
+val = 10
+print(f"Value is {val * 2}") 
+# Output: "Value is 20"
+\`\`\``,
     challenge: `**Mission:**  
 1. Use an f-string to print **"System Efficiency: 98%"**.  
 2. Use the variable \`eff = 98\` inside the f-string curly braces.`,
@@ -501,16 +626,17 @@ print(f"Welcome back, {name}.")
 
   24: {
     theory: `## Universal Adapters: *args & **kwargs
-Sometimes you don't know how many inputs a system will receive.
-- \`*args\` collects extra positional arguments into a tuple.
-- \`**kwargs\` collects extra keyword arguments into a dictionary.
+Sometimes you don't know how many inputs a system will receive.`,
+    tutorial: `If you don't know how many arguments will be passed to your function, add a \`*\` before the parameter name.
+This receives a **tuple** of arguments.
 
+**Example:**
 \`\`\`python
-def log(*args):
-    for msg in args:
-        print(msg)
-\`\`\`
-`,
+def my_func(*kids):
+  print("The youngest child is " + kids[2])
+
+my_func("Emil", "Tobias", "Linus")
+\`\`\``,
     challenge: `**Mission:**  
 1. Define a function \`sum_all(*args)\` that sums all numbers passed to it.  
 2. Call \`print(sum_all(1, 2, 3, 4))\`.`,
@@ -524,16 +650,15 @@ def log(*args):
 
   25: {
     theory: `## Resource Airlocks: Context Managers
-The \`with\` statement ensures resources (like files or connections) are safely opened and closed, even if errors occur.
-It acts as an automatic airlock.
+The \`with\` statement ensures resources are safely opened and closed, even if errors occur.`,
+    tutorial: `The most common use of context managers is opening files. Using \`with\`, the file is automatically closed after the indented block is finished, preventing memory leaks or corruption.
 
+**Example:**
 \`\`\`python
-# Simulating file open
-with open("log.txt", "r") as file:
-    data = file.read()
-# File closes automatically here
-\`\`\`
-`,
+with open("file.txt", "r") as f:
+    content = f.read()
+# f is closed here automatically
+\`\`\``,
     challenge: `**Mission:**  
 For this simulation, we will use a mock context manager.  
 1. Write: \`with open("data.txt", "w") as f:\`  
@@ -550,15 +675,19 @@ For this simulation, we will use a mock context manager.
 
   26: {
     theory: `## Parallel Processing: Enumerate & Zip
-- \`enumerate()\`: Adds a counter to an iterable (index, value).
-- \`zip()\`: Combines two iterables side-by-side like a zipper.
+- \`enumerate()\`: Adds a counter to an iterable.
+- \`zip()\`: Combines two iterables.`,
+    tutorial: `Often you need the index (position) of an item while looping. \`enumerate()\` gives you back two variables: the index and the value.
 
+**Example:**
 \`\`\`python
-names = ["A", "B"]
-for i, name in enumerate(names):
-    print(i, name)
-\`\`\`
-`,
+fruits = ["apple", "banana"]
+for idx, x in enumerate(fruits):
+  print(idx, x)
+# Output:
+# 0 apple
+# 1 banana
+\`\`\``,
     challenge: `**Mission:**  
 1. Given \`items = ["Alpha", "Beta"]\`.  
 2. Use \`enumerate\` in a for-loop to print the index and the item.`,
@@ -573,15 +702,23 @@ for i, name in enumerate(names):
 
   27: {
     theory: `## Stream Refineries: Map & Filter
-Functional programming tools allows for mass-processing of data arrays.
-- \`map()\`: Apply a function to every item.
-- \`filter()\`: Keep items that match a condition.
+Functional programming tools allows for mass-processing of data arrays.`,
+    tutorial: `**Filter**: The \`filter()\` function returns an iterator were the items are filtered through a function to test if the item is accepted or not.
+    
+**Syntax**: \`filter(function, iterable)\`
 
+**Example:**
 \`\`\`python
-# Get evens
-evens = list(filter(lambda x: x % 2 == 0, [1, 2, 3]))
-\`\`\`
-`,
+ages = [5, 12, 17, 18, 24, 32]
+
+def myFunc(x):
+  if x < 18:
+    return False
+  else:
+    return True
+
+adults = filter(myFunc, ages)
+\`\`\``,
     challenge: `**Mission:**  
 1. Given \`nums = [1, 2, 3, 4]\`.  
 2. Use \`filter\` and a \`lambda\` to keep only numbers greater than **2**.  
@@ -597,17 +734,23 @@ evens = list(filter(lambda x: x % 2 == 0, [1, 2, 3]))
 
   28: {
     theory: `## The Soul of the Machine: Magic Methods
-Magic methods (dunders) allow objects to behave like built-in types.
-- \`__init__\`: Constructor.
-- \`__str__\`: String representation.
+Magic methods (dunders) allow objects to behave like built-in types.`,
+    tutorial: `Dunder (Double UNDERscore) methods are special methods.
+\`__str__\` controls what is returned when you call \`str(object)\` or \`print(object)\`.
 
+**Example:**
 \`\`\`python
-class Atom:
-    def __str__(self):
-        return "I am an Atom"
-print(Atom()) # Prints "I am an Atom"
-\`\`\`
-`,
+class Person:
+  def __init__(self, name, age):
+    self.name = name
+    self.age = age
+
+  def __str__(self):
+    return f"{self.name}({self.age})"
+
+p = Person("John", 36)
+print(p) # Output: John(36)
+\`\`\``,
     challenge: `**Mission:**  
 1. Create a class \`Core\`.  
 2. Define \`__str__\` to return **"Core Online"**.  
@@ -622,14 +765,17 @@ print(Atom()) # Prints "I am an Atom"
 
   29: {
     theory: `## Structural Integrity: Type Hinting
-Type hints act as structural reinforcement, telling developers (and linters) what data types are expected.
-They are the standard for reporting variable status.
+Type hints act as structural reinforcement, telling developers what data types are expected.`,
+    tutorial: `Python is dynamically typed, but you can add optional type hints to help documentation and IDE tools.
+This doesn't affect runtime, but makes code cleaner.
 
+**Syntax:** \`variable: type\` and \`def func(arg: type) -> return_type:\`
+
+**Example:**
 \`\`\`python
 def add(x: int, y: int) -> int:
     return x + y
-\`\`\`
-`,
+\`\`\``,
     challenge: `**Mission:**  
 1. Define a function \`greet(name: str) -> str\`.  
 2. It should return **"Hello " + name**.  
@@ -644,18 +790,19 @@ def add(x: int, y: int) -> int:
 
   30: {
     theory: `## The Infinite Loop: Recursion
-Recursion occurs when a function calls itself.
-To prevent a stack overflow (system crash), you must have a "Base Case" to stop the loop.
+Recursion occurs when a function calls itself.`,
+    tutorial: `Recursion is a common mathematical and programming concept. It means that a function calls itself.
+Every recursive function needs a **Base Case**—a condition where it stops calling itself, otherwise it runs forever (Stack Overflow).
 
+**Example:**
 \`\`\`python
-def countdown(n):
-    if n <= 0:
-        print("Liftoff!")
-    else:
-        print(n)
-        countdown(n - 1)
-\`\`\`
-`,
+def tri_recursion(k):
+  if k > 0:
+    result = k + tri_recursion(k - 1)
+  else:
+    result = 0
+  return result
+\`\`\``,
     challenge: `**Mission:**  
 1. Define a recursive function \`factorial(n)\`.  
 2. Base case: if \`n\` is 1, return 1.  
@@ -671,15 +818,17 @@ def countdown(n):
 
   31: {
     theory: `## Temporal Coordinates: Datetime
-The \`datetime\` module allows you to manipulate temporal markers.
-Get the current date, format timestamps, and calculate durations.
+The \`datetime\` module allows you to manipulate temporal markers.`,
+    tutorial: `A date in Python is not a data type of its own, but we can import a module named \`datetime\` to work with dates as date objects.
 
+**Example:**
 \`\`\`python
-from datetime import datetime
-now = datetime.now()
-print(now.strftime("%Y-%m-%d"))
-\`\`\`
-`,
+import datetime
+
+x = datetime.datetime.now()
+print(x.year)
+print(x.strftime("%A")) # Weekday name
+\`\`\``,
     challenge: `**Mission:**  
 1. Import \`datetime\` from \`datetime\`.  
 2. Create a date object for **Jan 1, 2050** using \`datetime(2050, 1, 1)\`.  
@@ -694,15 +843,17 @@ print(now.strftime("%Y-%m-%d"))
 
   32: {
     theory: `## Universal Serialization: JSON
-JSON (JavaScript Object Notation) is the lingua franca of data exchange.
-Python's \`json\` module encodes/decodes dictionaries to strings for transmission.
+JSON (JavaScript Object Notation) is the lingua franca of data exchange.`,
+    tutorial: `JSON is a syntax for storing and exchanging data. Python has a built-in package called \`json\`, which can be used to work with JSON data.
+- \`json.dumps()\`: Convert Python object to JSON string.
+- \`json.loads()\`: Convert JSON string to Python object.
 
+**Example:**
 \`\`\`python
 import json
-data = {"status": "ok"}
-json_str = json.dumps(data)
-\`\`\`
-`,
+x = { "name": "John", "age": 30 }
+y = json.dumps(x) # Result is a string
+\`\`\``,
     challenge: `**Mission:**  
 1. Import \`json\`.  
 2. Create a dictionary \`payload = {"id": 99}\`.  
@@ -717,16 +868,21 @@ json_str = json.dumps(data)
 
   33: {
     theory: `## Pattern Recognition: Regex (re)
-Regular Expressions allow for complex string searching and validation.
-The \`re\` module is your scanner for finding patterns in chaotic data streams.
+Regular Expressions allow for complex string searching and validation.`,
+    tutorial: `A RegEx, or Regular Expression, is a sequence of characters that forms a search pattern.
+The \`re\` module offers a set of functions that allows us to search a string for a match.
 
+**Common patterns:**
+- \`\\d\`: Any digit (0-9)
+- \`\\w\`: Any alphanumeric character
+- \`+\`: One or more occurrences
+
+**Example:**
 \`\`\`python
 import re
-text = "Error: 404"
-match = re.search(r"\\d+", text)
-print(match.group()) # "404"
-\`\`\`
-`,
+txt = "The rain in Spain"
+x = re.search("^The.*Spain$", txt)
+\`\`\``,
     challenge: `**Mission:**  
 1. Import \`re\`.  
 2. Use \`re.search()\` to find the digits in **"Sector 7G"**.  
@@ -743,15 +899,16 @@ text = "Sector 7G"
 
   34: {
     theory: `## High-Speed Tally: Collections Counter
-The \`Counter\` tool automatically tallies elements in a list.
-It returns a dictionary-like object with counts of each unique item.
+The \`Counter\` tool automatically tallies elements in a list.`,
+    tutorial: `A \`Counter\` is a sub-class of the dictionary. It is used to keep the count of the elements in an iterable in the form of an unordered dictionary where the key represents the element in the iterable and value represents the count of that element.
 
+**Example:**
 \`\`\`python
 from collections import Counter
-print(Counter(["A", "A", "B"])) 
-# Counter({'A': 2, 'B': 1})
-\`\`\`
-`,
+c = Counter(['a', 'b', 'c', 'a', 'b', 'b'])
+print(c)
+# Counter({'b': 3, 'a': 2, 'c': 1})
+\`\`\``,
     challenge: `**Mission:**  
 1. Import \`Counter\` from \`collections\`.  
 2. Count the votes in \`["Yes", "No", "Yes", "Yes"]\`.  
@@ -767,14 +924,17 @@ print(Counter(["A", "A", "B"]))
 
   35: {
     theory: `## Safe Storage: DefaultDict
-A \`defaultdict\` never raises a KeyError. If a key is missing, it creates it automatically using a factory function (like \`int\` or \`list\`).
+A \`defaultdict\` never raises a KeyError.`,
+    tutorial: `Usually, a Python dictionary throws a \`KeyError\` if you try to get an item with a key that is not currently in the dictionary. 
+The \`defaultdict\` in contrast will simply create any items that you try to access (provided of course they do not exist yet).
 
+**Example:**
 \`\`\`python
 from collections import defaultdict
-d = defaultdict(int)
-d["new_key"] += 1 # No error, starts at 0
-\`\`\`
-`,
+# Factory function 'list' creates empty list on missing key
+d = defaultdict(list) 
+d["python"].append("awesome")
+\`\`\``,
     challenge: `**Mission:**  
 1. Import \`defaultdict\` from \`collections\`.  
 2. Create a \`defaultdict(int)\`.  
@@ -789,15 +949,22 @@ d["new_key"] += 1 # No error, starts at 0
 
   36: {
     theory: `## Data Gatekeepers: @property
-Properties allow you to control access to class attributes (getters/setters) while keeping the syntax clean (dot notation).
+Properties allow you to control access to class attributes.`,
+    tutorial: `The \`@property\` decorator allows you to define a method that can be accessed like an attribute (without parentheses). This is often used for "Getters" to calculate values on the fly or control access.
 
+**Example:**
 \`\`\`python
-class Bot:
+class Circle:
+    def __init__(self, radius):
+        self.radius = radius
+
     @property
-    def energy(self):
-        return 100
-\`\`\`
-`,
+    def diameter(self):
+        return self.radius * 2
+
+c = Circle(5)
+print(c.diameter) # 10 (Notice no parentheses!)
+\`\`\``,
     challenge: `**Mission:**  
 1. Create class \`Shield\`.  
 2. Add a method \`level(self)\` decorated with \`@property\` that returns **50**.  
@@ -812,16 +979,18 @@ class Bot:
 
   37: {
     theory: `## Factory Controls: Class Methods
-\`@classmethod\` receives the class itself (\`cls\`) as the first argument, not the instance.
-It is often used for factory methods (creating objects in different ways).
+\`@classmethod\` receives the class itself (\`cls\`) as the first argument.`,
+    tutorial: `Regular methods take \`self\` (the instance). Class methods take \`cls\` (the class). 
+They can be called on the class itself, without creating an instance first.
+This is often used for factory methods (alternative constructors).
 
+**Example:**
 \`\`\`python
-class Star:
+class Pizza:
     @classmethod
-    def form(cls):
-        return cls()
-\`\`\`
-`,
+    def margherita(cls):
+        return cls(["cheese", "tomatoes"])
+\`\`\``,
     challenge: `**Mission:**  
 1. Create class \`Drone\`.  
 2. Add a class method \`create(cls)\` that returns **"Drone Created"**.  
@@ -836,16 +1005,16 @@ class Star:
 
   38: {
     theory: `## Lightweight Structure: NamedTuple
-NamedTuples are like tuples but with named fields. They are memory-efficient and immutable.
-Perfect for storing coordinates or rigid data structures.
+NamedTuples are like tuples but with named fields.`,
+    tutorial: `Named tuples assign meaning to each position in a tuple and allow for more readable, self-documenting code. They can be used wherever regular tuples are used, and they add the ability to access fields by name instead of position index.
 
+**Example:**
 \`\`\`python
 from collections import namedtuple
-Point = namedtuple('Point', ['x', 'y'])
-p = Point(10, 20)
-print(p.x)
-\`\`\`
-`,
+Color = namedtuple('Color', ['red', 'green', 'blue'])
+c = Color(55, 155, 255)
+print(c.red) # 55
+\`\`\``,
     challenge: `**Mission:**  
 1. Import \`namedtuple\`.  
 2. Create a type \`Coord\` with fields \`lat\` and \`lon\`.  
@@ -860,16 +1029,19 @@ print(p.x)
 
   39: {
     theory: `## Enforced Blueprints: Abstract Classes
-Abstract Base Classes (ABCs) force subclasses to implement specific methods.
-They act as strict architectural contracts.
+Abstract Base Classes (ABCs) force subclasses to implement specific methods.`,
+    tutorial: `An abstract class can be considered a blueprint for other classes. It allows you to create a set of methods that must be created within any child classes built from the abstract class.
+A class which contains one or more abstract methods is called an abstract class.
 
+**Example:**
 \`\`\`python
 from abc import ABC, abstractmethod
-class Base(ABC):
+
+class Polygon(ABC):
     @abstractmethod
-    def run(self): pass
-\`\`\`
-`,
+    def sides(self):
+        pass
+\`\`\``,
     challenge: `**Mission:**  
 1. Define a class \`Template(ABC)\`.  
 2. Add an abstract method \`process\`.  
@@ -887,16 +1059,20 @@ class Base(ABC):
 
   40: {
     theory: `## Genetic Mixing: Multiple Inheritance
-Python supports inheriting from multiple parents.
-Use with extreme caution to avoid the "Diamond Problem" (ambiguous lineage).
-The Method Resolution Order (MRO) determines priority.
+Python supports inheriting from multiple parents.`,
+    tutorial: `A class can be derived from more than one base class in Python. This is called multiple inheritance.
+The child class has access to all the methods and attributes of all parent classes.
+**MRO (Method Resolution Order)** determines which parent's method is called if names collide.
 
+**Example:**
 \`\`\`python
-class A: pass
-class B: pass
-class C(A, B): pass
-\`\`\`
-`,
+class A:
+    pass
+class B:
+    pass
+class C(A, B):
+    pass
+\`\`\``,
     challenge: `**Mission:**  
 1. Create class \`Flyable\` with method \`fly\` (prints "Flying").  
 2. Create class \`Swimmable\` with method \`swim\` (prints "Swimming").  
@@ -912,16 +1088,19 @@ class C(A, B): pass
 
   41: {
     theory: `## Function Freezing: Partials
-\`functools.partial\` allows you to create a new function with some arguments already fixed (frozen).
-Useful for callbacks or simplifying complex APIs.
+\`functools.partial\` allows you to create a new function with some arguments already fixed (frozen).`,
+    tutorial: `Partial functions allow us to fix a certain number of arguments of a function and generate a new function.
+This is useful when you have a function that takes many arguments, but you want to use it in a context where you can only provide some of them.
 
+**Example:**
 \`\`\`python
 from functools import partial
-def power(base, exp): return base ** exp
-square = partial(power, exp=2)
+def power(base, exponent):
+    return base ** exponent
+
+square = partial(power, exponent=2)
 print(square(10)) # 100
-\`\`\`
-`,
+\`\`\``,
     challenge: `**Mission:**  
 1. Import \`partial\` from \`functools\`.  
 2. Create a function \`multiply(x, y)\`.  
@@ -937,15 +1116,17 @@ print(square(10)) # 100
 
   42: {
     theory: `## Cognitive Cache: Memoization
-Memoization saves the results of expensive function calls.
-Python's \`@lru_cache\` decorator automatically handles this caching to speed up recursion.
+Memoization saves the results of expensive function calls.`,
+    tutorial: `Memoization is an optimization technique used primarily to speed up computer programs by storing the results of expensive function calls.
+Python's \`functools\` module provides the \`@lru_cache\` (Least Recently Used) decorator to do this automatically.
 
+**Example:**
 \`\`\`python
-from functools import lru_cache
 @lru_cache(maxsize=None)
-def heavy_task(n): ...
-\`\`\`
-`,
+def fib(n):
+    if n < 2: return n
+    return fib(n-1) + fib(n-2)
+\`\`\``,
     challenge: `**Mission:**  
 1. Import \`lru_cache\`.  
 2. Decorate a function \`calc(n)\` with \`@lru_cache\`.  
@@ -962,8 +1143,22 @@ def heavy_task(n): ...
 
   43: {
     theory: `## Custom Traversal: Iterators
-To make an object iterable (usable in a for-loop), you must implement \`__iter__\` and \`__next__\`.
-This allows for custom traversal logic over data structures.`,
+To make an object iterable (usable in a for-loop), you must implement \`__iter__\` and \`__next__\`.`,
+    tutorial: `An iterator is an object that contains a countable number of values.
+Technically, in Python, an iterator is an object which implements the iterator protocol, which consists of the methods \`__iter__()\` and \`__next__()\`.
+
+**Example:**
+\`\`\`python
+class MyNumbers:
+  def __iter__(self):
+    self.a = 1
+    return self
+
+  def __next__(self):
+    x = self.a
+    self.a += 1
+    return x
+\`\`\``,
     challenge: `**Mission:**  
 1. Create a class \`Repeater\`.  
 2. Define \`__iter__\` to return \`self\`.  
@@ -979,14 +1174,23 @@ This allows for custom traversal logic over data structures.`,
 
   44: {
     theory: `## Meta-Decorators: Decorators with Args
-Standard decorators take a function. But what if the decorator itself needs configuration?
-You need a three-level wrapper structure.
+Standard decorators take a function. But what if the decorator itself needs configuration?`,
+    tutorial: `To pass arguments to your decorators, you need to add another layer of wrapping. 
+1. The outer function accepts arguments.
+2. The middle function accepts the function to be decorated.
+3. The inner function accepts arguments passed to the decorated function.
 
+**Structure:**
 \`\`\`python
-@repeat(times=3)
-def speak(): ...
-\`\`\`
-`,
+def repeat(num_times):
+    def decorator_repeat(func):
+        def wrapper(*args, **kwargs):
+            for _ in range(num_times):
+                value = func(*args, **kwargs)
+            return value
+        return wrapper
+    return decorator_repeat
+\`\`\``,
     challenge: `**Mission:**  
 1. Create a decorator \`@add_tag(tag)\`.  
 2. It should return a string result wrapped in the tag (e.g., "<tag>result</tag>").  
@@ -1009,14 +1213,19 @@ def speak(): ...
 
   45: {
     theory: `## Syntax Singularity: The Walrus Operator
-The Walrus Operator \`:=\` assigns values to variables as part of a larger expression.
-It allows for compact, dense code blocks.
+The Walrus Operator \`:=\` assigns values to variables as part of a larger expression.`,
+    tutorial: `The walrus operator \`:=\` allows you to assign a value to a variable inside an expression. This is useful when you need to use a value twice in a condition (once to test it, once to use it).
 
+**Example:**
 \`\`\`python
+# Old way
+n = len(data)
+if n > 10: ...
+
+# Walrus way
 if (n := len(data)) > 10:
-    print(f"Too long: {n}")
-\`\`\`
-`,
+    print(f"Length is {n}")
+\`\`\``,
     challenge: `**Mission:**  
 1. Write an \`if\` statement using \`:=\`.  
 2. Assign \`x := 10\` inside the condition.  
@@ -1032,13 +1241,17 @@ if (n := len(data)) > 10:
 
   46: {
     theory: `## Reality Check: Asserts
-\`assert\` is a debugging tool. It verifies a condition is True.
-If False, it crashes the program with an AssertionError. Use it to enforce impossible states.
+\`assert\` is a debugging tool. It verifies a condition is True.`,
+    tutorial: `The \`assert\` keyword is used when debugging code. It tests if a condition in your code returns True, if not, the program will raise an \`AssertionError\`.
 
+**Syntax:** \`assert condition, message\`
+
+**Example:**
 \`\`\`python
-assert 2 + 2 == 4, "Math broken"
-\`\`\`
-`,
+x = "hello"
+assert x == "hello"
+assert x == "goodbye", "x should be hello"
+\`\`\``,
     challenge: `**Mission:**  
 1. Write \`assert 10 > 5\`.  
 2. Write \`print("Checked")\`.  
@@ -1053,14 +1266,15 @@ assert 2 + 2 == 4, "Math broken"
 
   47: {
     theory: `## Strict Schematics: Generics
-When type hinting lists or dicts, use Generics to specify *what* is inside them.
-From Python 3.9+, use built-in types. Before, import from \`typing\`.
+When type hinting lists or dicts, use Generics to specify *what* is inside them.`,
+    tutorial: `In modern Python (3.9+), you can use built-in collection types like \`list\` and \`dict\` as generic types. This helps define exactly what kind of list it is.
 
+**Example:**
 \`\`\`python
-def sum_list(nums: list[int]) -> int:
-    return sum(nums)
-\`\`\`
-`,
+# A list that contains only integers
+def process(numbers: list[int]):
+    pass
+\`\`\``,
     challenge: `**Mission:**  
 1. Define function \`process(items: list[str])\`.  
 2. It should return the first item.  
@@ -1075,17 +1289,21 @@ def sum_list(nums: list[int]) -> int:
 
   48: {
     theory: `## Automated Construction: Dataclasses
-Dataclasses automatically generate \`__init__\`, \`__repr__\`, and \`__eq__\` methods based on type hints.
-They drastically reduce boilerplate code for data-holding classes.
+Dataclasses automatically generate \`__init__\`, \`__repr__\`, and \`__eq__\` methods based on type hints.`,
+    tutorial: `Data classes are a decorator and functions for automatically adding generated special methods such as \`__init__()\` and \`__repr__()\` to user-defined classes.
 
+**Example:**
 \`\`\`python
 from dataclasses import dataclass
+
 @dataclass
-class Item:
-    name: str
-    cost: float
-\`\`\`
-`,
+class Point:
+    x: int
+    y: int
+
+p = Point(10, 20)
+print(p) # Point(x=10, y=20)
+\`\`\``,
     challenge: `**Mission:**  
 1. Import \`dataclass\`.  
 2. Create \`@dataclass class User\`.  
@@ -1101,14 +1319,15 @@ class Item:
 
   49: {
     theory: `## Async Airlocks: Async Context Managers
-For managing resources that require asynchronous setup/teardown (like database connections).
-Uses \`async with\`, \`__aenter__\`, and \`__aexit__\`.
+For managing resources that require asynchronous setup/teardown (like database connections).`,
+    tutorial: `Just like standard context managers (\`with\`), async context managers (\`async with\`) allow you to allocate and release resources precisely, but they can suspend execution in their enter and exit methods.
 
+**Example:**
 \`\`\`python
-async with Connection() as conn:
-    await conn.send()
-\`\`\`
-`,
+async with aiohttp.ClientSession() as session:
+    async with session.get(url) as resp:
+        print(resp.status)
+\`\`\``,
     challenge: `**Mission:**  
 1. Define an \`async\` function \`run()\`.  
 2. Inside, mimic an async context: \`print("Entering")\`, then \`print("Exiting")\`.  
@@ -1125,13 +1344,13 @@ async with Connection() as conn:
   50: {
     theory: `## The Ultimate Truth: Zen of Python
 You have reached the summit of the PyVerse.
-The final lesson is the philosophy itself.
-The creators left a hidden message inside the core library.
+The final lesson is the philosophy itself.`,
+    tutorial: `Long time Pythoneer Tim Peters wrote the "Zen of Python", which sums up the design principles of the language.
+You can view it anytime by importing \`this\`.
 
-\`\`\`python
-import this
-\`\`\`
-`,
+> "Beautiful is better than ugly."
+> "Explicit is better than implicit."
+> "Simple is better than complex."`,
     challenge: `**Final Mission:**  
 1. \`import this\`.  
 2. This will automatically print the Zen of Python.  
@@ -1149,6 +1368,7 @@ import this
 export const getLesson = (id: number): LessonContent => {
   return STATIC_LESSONS[id] || {
     theory: "## Data Corrupted\nLink to central archives not found for this sector.",
+    tutorial: "No data available.",
     challenge: "Proceed to next node.",
     starterCode: "print('Bypassing...')",
     validationRegex: ".*",

@@ -24,6 +24,7 @@ export interface LevelNodeData {
 
 export interface LessonContent {
   theory: string;
+  tutorial: string; // New field for in-depth explanation
   challenge: string;
   starterCode: string;
   // New fields for static grading

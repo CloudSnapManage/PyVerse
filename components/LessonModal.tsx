@@ -168,16 +168,29 @@ const LessonModal: React.FC<LessonModalProps> = ({ node, onClose, onComplete, us
           </div>
           
           <div className="flex-1 overflow-y-auto p-4 md:p-6 space-y-6 custom-scrollbar text-gray-300 text-sm leading-relaxed pb-20 md:pb-6">
+             {/* Concept / Flavor Text */}
              <div>
                <h3 className="text-white font-bold mb-2 flex items-center gap-2">
                  <span className="w-1 h-4 bg-cyan-500 block"></span>
-                 Theory
+                 Concept
                </h3>
                <div className="prose prose-invert prose-sm max-w-none">
                  <ReactMarkdown>{content.theory}</ReactMarkdown>
                </div>
              </div>
 
+             {/* Technical Tutorial */}
+             <div className="bg-gray-800/30 p-4 rounded-lg border border-gray-700/50">
+               <h3 className="text-purple-300 font-bold mb-2 flex items-center gap-2">
+                 <span className="w-1 h-4 bg-purple-500 block"></span>
+                 Technical Briefing
+               </h3>
+               <div className="prose prose-invert prose-sm max-w-none text-gray-300">
+                 <ReactMarkdown>{content.tutorial}</ReactMarkdown>
+               </div>
+             </div>
+
+             {/* Challenge */}
              <div className="bg-blue-900/20 border border-blue-800/50 p-4 rounded-lg">
                 <h3 className="text-blue-300 font-bold mb-2 flex items-center gap-2">
                  <span className="text-lg">⚡</span>
