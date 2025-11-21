@@ -1,10 +1,11 @@
-import React from 'react';
+import React, { Suspense } from 'react';
 import { Canvas } from '@react-three/fiber';
-import { OrbitControls, Stars, PerspectiveCamera, Line, Sparkles, Environment } from '@react-three/drei';
+import { OrbitControls, Stars, PerspectiveCamera, Line, Sparkles, Environment, Html } from '@react-three/drei';
 import { LEVELS } from '../constants';
 import LevelNode from './LevelNode';
 import { NodeStatus } from '../types';
 import * as THREE from 'three';
+import { Loader } from './Loader';
 
 interface GameSceneProps {
   unlockedIds: number[];
@@ -98,7 +99,17 @@ const GameScene: React.FC<GameSceneProps> = (props) => {
           autoRotate={!props.isModalOpen}
           autoRotateSpeed={0.5}
         />
-        <SceneContent {...props} />
+        
+        <Suspense fallback={
+          <Html center>
+            <div className="w-64">
+              <Loader text="Loading Simulation..." />
+            </div>
+          </Html>
+        }>
+          <SceneContent {...props} />
+        </Suspense>
+
         <fog attach="fog" args={['#020202', 20, 140]} />
       </Canvas>
     </div>
